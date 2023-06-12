@@ -1,0 +1,80 @@
+@import "../../mixins.scss";
+
+.home{
+    .title-div{
+        margin-top: 1rem;
+        @include flex-col-center;
+        .title{
+            line-height: 3rem;
+            font-size: 1.6rem;
+            span{
+                color: var(--primary-color);
+            }
+        }
+    }
+    .account-div{
+        @include flex-row;
+        justify-content: space-around;
+        padding: 1rem 0;
+        .account{
+            .name{
+                font-weight: 600;
+            }
+            .id{
+                font-size: 0.8rem;
+                span{
+                    font-weight: 600;
+                }
+            }
+        }
+        .logout{
+            .btn{
+                width: 2.3rem;
+                height: 2.3rem;
+                padding: 0.5rem;
+                cursor: pointer;
+                svg{
+                    width: 100%;
+                    height: 100%;
+                    fill: var(--black-color-300);
+                }
+            }
+        }
+    }
+    .container{
+        @include flex-col-center;
+        .new-btn-div{
+            width: 75%;
+            @include flex-row;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            justify-content: space-between;
+            .btn{
+                @include flex-row-center;
+                gap: 0.6rem;
+                padding: var(--btn-padding-300);
+                border-radius: var(--border-redius-400);
+                background-color: var(--primary-color);
+                color: var(--white-color-100);
+                svg{
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    fill: var(--white-color-100);
+                }
+            }
+        }
+        .notFound{
+            margin: 2rem 0;
+        }
+    }
+    .overlap{
+        @include flex-col-center;
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        background-color: rgb(78 83 75 / 28%);
+    }
+}

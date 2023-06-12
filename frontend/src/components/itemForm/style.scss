@@ -1,0 +1,76 @@
+@import "../../mixins.scss";
+
+.itemFrom{
+    padding: 2rem;
+    background-color: var(--bg-color-100);
+    @include flex-col-center;
+    width: 30%;
+    border: 1px solid var(--bg-color-200);
+    border-radius: 1rem;
+    .title{
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .inputBox{
+        width: 95%;
+        @include flex-col-center;
+        margin-bottom: 1rem;
+
+        .message{
+            margin-top: 0.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            width: 100%;
+            display: block;
+            transition: var(--trans-4);
+            color: var(--danger-color);
+            font-size: 0.9rem;
+            border: 1px solid var(--danger-color);
+            padding: 0.5rem;
+            &.success{
+                color: var(--success-color);
+                border-color: var(--success-color);
+            }
+            &:empty{
+                display: none;
+            }
+        }
+        input, textarea{
+            width: 100%;
+            font-size: 1rem;
+            border-radius: var(--border-redius-100);
+            padding: var(--btn-padding-300);
+            background: var(--bg-color-200);
+        }
+        textarea{
+            width: 100%;
+            height: 5rem;
+            resize: none;
+            overflow: hidden;
+        }
+        &.btns{
+            @include flex-row-center;
+            flex-direction: row;
+            justify-content: space-around;
+            button{
+                width: 40%;
+                border-radius: 20rem;
+                font-size: 1rem;
+                margin-top: 1rem;
+                border: 0.1rem solid var(--primary-color);
+                color: var(--white-color-100);
+                font-weight: 600;
+                padding: var(--btn-padding-300);
+                background-color: var(--primary-color);
+                &.close{
+                    background-color: var(--bg-color-100);
+                    color: var(--primary-color);
+                }
+                &:disabled{
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

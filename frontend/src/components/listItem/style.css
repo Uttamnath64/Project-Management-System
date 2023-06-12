@@ -1,0 +1,40 @@
+.item {
+  width: 75%;
+  padding: 1rem;
+  border: 0.1rem solid var(--white-color-200);
+  margin: 0.5rem 0;
+}
+.item .title {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-bottom: 0.5rem;
+}
+.item .description {
+  font-size: 0.9rem;
+}
+.item .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  justify-content: space-between;
+}
+.item .row .price {
+  font-weight: 700;
+}
+.item .row .btns {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.item .row .btns .btn {
+  width: 2rem;
+  height: 2rem;
+  padding: 0.4rem;
+}
+.item .row .btns .btn svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--black-color-300);
+}/*# sourceMappingURL=style.css.map */

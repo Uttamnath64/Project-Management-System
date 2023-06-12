@@ -1,0 +1,30 @@
+@mixin ellipsis($line: 2) {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-row-center{
+  @include flex-row;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column{
+  @include flex-row;
+  flex-direction: column;
+}
+
+@mixin flex-col-center{
+  @include flex-column();
+  align-items: center;
+  justify-content: center;
+}
+  

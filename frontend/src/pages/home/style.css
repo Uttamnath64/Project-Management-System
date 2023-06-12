@@ -1,0 +1,89 @@
+.home .title-div {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home .title-div .title {
+  line-height: 3rem;
+  font-size: 1.6rem;
+}
+.home .title-div .title span {
+  color: var(--primary-color);
+}
+.home .account-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+.home .account-div .account .name {
+  font-weight: 600;
+}
+.home .account-div .account .id {
+  font-size: 0.8rem;
+}
+.home .account-div .account .id span {
+  font-weight: 600;
+}
+.home .account-div .logout .btn {
+  width: 2.3rem;
+  height: 2.3rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.home .account-div .logout .btn svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--black-color-300);
+}
+.home .container {
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home .container .new-btn-div {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+.home .container .new-btn-div .btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: var(--btn-padding-300);
+  border-radius: var(--border-redius-400);
+  background-color: var(--primary-color);
+  color: var(--white-color-100);
+}
+.home .container .new-btn-div .btn svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: var(--white-color-100);
+}
+.home .container .notFound {
+  margin: 2rem 0;
+}
+.home .overlap {
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  background-color: rgba(78, 83, 75, 0.28);
+}/*# sourceMappingURL=style.css.map */

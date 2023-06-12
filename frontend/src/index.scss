@@ -1,0 +1,151 @@
+@import "./mixins.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2rem;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --bg-color-100: #ffffff;
+  --bg-color-200: #f2f2f2;
+  --bg-color-300: #ededed;
+
+  --white-color-100: #ffffff;
+  --white-color-200: #e6e6e6;
+  --white-color-300: #c3c3c3;
+  --white-color-400: #a0a0a0;
+
+  --black-color-100: #000000;
+  --black-color-200: #222222;
+  --black-color-300: #434343;
+  --black-color-400: #606060;
+
+  --primary-color: #22A699;
+  --primary-color-on: #22A699;
+  --secondary-color: #404c5a;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+
+  --hover-color: rgba(0, 0, 0, 0.05);
+
+  --trans-1: all 0.1s ease;
+  --trans-2: all 0.2s ease;
+  --trans-3: all 0.3s ease;
+  --trans-4: all 0.4s ease;
+
+  --border-redius-100: 0.4rem;
+  --border-redius-200: 0.8rem;
+  --border-redius-300: 1rem;
+  --border-redius-400: 2rem;
+
+  --card-padding: 1rem;
+
+  --btn-padding-100: 0.2rem 1rem;
+  --btn-padding-200: 0.4rem 1rem;
+  --btn-padding-300: 0.6rem 1rem;
+  --btn-padding-400: 0.8rem 1rem;
+}
+
+*,::after,::before {
+  margin: 0;
+  padding: 0;
+  color: var(--black-color-300);
+  outline: none;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  
+}
+html{  
+  height: max-content;
+}
+body{
+  &.dark-content{
+    --bg-color-100: #111111;
+    --bg-color-200: #252525;
+    --bg-color-300: #303030;
+  
+    --black-color-100: #ffffff;
+    --black-color-200: #e6e6e6;
+    --black-color-300: #c3c3c3;
+    --black-color-400: #a0a0a0;
+  
+    --white-color-100: #000000;
+    --white-color-200: #222222;
+    --white-color-300: #434343;
+    --white-color-400: #606060; 
+  }
+}
+body {
+  @include flex-row;
+  height: 100%;
+  background-color: var(--bg-color-100);
+}
+#root {
+  @include flex-column;
+  width: 100%;
+  height: 100%;
+}
+
+h1,h2,h3,h4,h5{
+  color: var(--black-color-100);
+}
+h1{
+  font-size: 2.2rem;
+}
+h2{
+  font-size: 2rem;
+}
+h3{
+  font-size: 1.8rem;
+}
+h4{
+  font-size: 1.6rem;
+}
+h5{
+  font-size:1.4rem;
+}
+h6{
+  font-size: 1.2rem;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.anim {
+  animation: 150ms ease-in-out 0s 1 normal forwards running k7;
+}
+
+.click-hover {
+  position: relative;
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.3, 1.3);
+  }
+  &::after {
+    content: "";
+    background: var(--hover-color);
+    border-radius: 20rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: var(--trans-1);
+    opacity: 0;
+    box-sizing: border-box;
+    visibility: hidden;
+  }
+}
