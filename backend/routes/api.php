@@ -9,11 +9,6 @@ use App\Http\Controllers\ProductController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request){
     return $request->user();
 });
-Route::get('/csrf-token', function () {
-    return response()->json([
-        'token' => csrf_token()
-    ]);
-});
 
 // user API's
 Route::post('register',[AuthController::class,'register']);
